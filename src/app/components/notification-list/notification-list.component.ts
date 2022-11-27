@@ -14,7 +14,7 @@ export class NotificationListComponent {
     },
     {
       titulo: 'IFOOD',
-      subtitulo: 'Seu produto está a caminho!',
+      subtitulo: 'Recebemos o seu pedido. Aguarde o tempo previsto!',
       data: new Date().toLocaleString()
     },
     {
