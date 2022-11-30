@@ -11,26 +11,25 @@ export class NotificationListComponent {
       titulo: 'IFOOD',
       subtitulo: 'Seu produto está a caminho!',
       data: new Date().toLocaleString(),
-      lido: '',
+      status: false,
     },
     {
       titulo: 'IFOOD',
       subtitulo: 'Recebemos o seu pedido. Aguarde o tempo previsto!',
       data: new Date().toLocaleString(),
-      lido: false,
+      status: false,
     },
     {
       titulo: 'IFOOD',
       subtitulo: 'Cupom de R$15 disponível no seu aplicativo',
       data: new Date().toLocaleString(),
-      lido: false,
+      status: false,
     },
   ];
 
-  status: boolean = false;
 
-  statusCheck() {
-    this.status = !this.status; 
+  statusCheck(i) {
+    this.notificacoes[i].status = !this.notificacoes[i].status; 
   }
 }
 
