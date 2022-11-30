@@ -6,25 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./notification-list.component.css']
 })
 export class NotificationListComponent {
-  pessoas = [
+  notificacoes = [
     {
       titulo: 'IFOOD',
       subtitulo: 'Seu produto está a caminho!',
-      data: new Date().toLocaleString()
+      data: new Date().toLocaleString(),
+      lido: '',
     },
     {
       titulo: 'IFOOD',
       subtitulo: 'Recebemos o seu pedido. Aguarde o tempo previsto!',
-      data: new Date().toLocaleString()
+      data: new Date().toLocaleString(),
+      lido: false,
     },
     {
       titulo: 'IFOOD',
       subtitulo: 'Cupom de R$15 disponível no seu aplicativo',
-      data: new Date().toLocaleString()
+      data: new Date().toLocaleString(),
+      lido: false,
     },
   ];
 
-  salvarPessoa() {
-    console.log('Salvo com sucesso!');
+  status: boolean = false;
+
+  statusCheck() {
+    this.status = !this.status; 
   }
 }
+
