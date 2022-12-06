@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ntap-notification-list',
   templateUrl: './notification-list.component.html',
-  styleUrls: ['./notification-list.component.css']
+  styleUrls: ['./notification-list.component.css'],
 })
 export class NotificationListComponent {
   notificacoes = [
@@ -27,9 +27,7 @@ export class NotificationListComponent {
     },
   ];
 
-
-  statusCheck(i) {
-    this.notificacoes[i].status = !this.notificacoes[i].status; 
+  statusCheck(i: number) {
+    this.notificacoes[i].status = !this.notificacoes[i].status;
   }
 }
-
